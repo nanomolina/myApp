@@ -1,0 +1,33 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Dirección de Ingresos Tributarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div padding>
+    Aplicación de uso exclusivo para agentes tributarios <br>
+    Día y hora: {{time}}<br>
+    Dominio: {{patent}}<br>
+    data: {{dataJson}}
+  </div>
+
+
+  <div padding>
+    <form (ngSubmit)="searchPatent()">
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Dominio</ion-label>
+          <ion-input type="text" [(ngModel)]="patent" name="dominio"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <button ion-button color="primary" block type="submit">Consultar</button>
+
+    </form>
+  </div>
+
+</ion-content>
